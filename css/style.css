@@ -1,0 +1,528 @@
+* { /*these parameters apply to ALL elements on page*/
+    font-family: "Stack Sans Headline", "Stack Sans Text", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center; /*for my layout it is efficient to keep everything centered*/
+    text-decoration: none;
+    border-radius: 10px; /*every element has a border radius of 10 pixels or more, this is so every element will be rounded*/
+}
+
+/*background and element colour configuration using variables - this is more efficient than manually placing hex code colours on everything, because it saves time on having to go back and check for exact colour coordinates*/
+:root {
+    --yellow: #ffc107; /*element colour, mostly for buttons*/
+    --darkyellow: #b8952e; /*only applied to hover element of buttons with the "yellow" variable*/
+    --turquoise: #00bcd4; /*element colour*/
+    --blue: #0d1c6d; /*background colour*/
+    --pink: #f96294; /*element colour*/
+    --white: #fff; /*navbar and "text box" colour*/
+    --grey: #c4c4c4; /*only used for boxes in the contact form*/
+    --black: #000; /*text and activated button colour*/
+}
+
+/*configuration for non-class elements - applies everywhere except for elements that have exceptions*/
+body {
+    background-color: var(--blue);
+    color: var(--black);
+    font-size: 1.5em;
+    text-shadow: 0 0 26px var(--black);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+a {
+    color: var(--black);
+}
+
+li {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/*navbar configuration*/
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.hamburger-container {
+    display: none;
+}
+
+.navbar { /*navbar class that just contains the page links - separates the rest of the nav*/
+    display: block;
+}
+
+.navbar a {
+    margin: 0 5px 0;
+    padding: 5px;
+}
+
+.navbar a:hover {
+    background-color: var(--yellow);
+}
+
+.navbar a:active {
+    background-color: var(--darkyellow);
+}
+
+nav img { /*event logo*/
+    height: 100px;
+}
+
+/*footer*/
+
+footer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*main - margin configuration gives more space for blue background on top, and left and right sides*/
+/*top and bottom margin of 26px is to separate the navbar and footer away from main elements*/
+/*left and right margin of 18px is to prevent the "section" elements from touching the left and right side*/
+
+main {
+    margin: 26px 18px;
+}
+
+nav, section, footer {
+    box-shadow: 0 0 10px var(--pink);
+}
+
+/*section elements - section classes configure background colours*/
+
+section {
+    margin: 10px 0;
+    padding: 8px;
+}
+
+section > section {
+    margin: 0 20px;
+}
+
+.section-yellow {
+    background-color: var(--yellow);
+}
+
+.section-turquoise {
+    background-color: var(--turquoise);
+}
+
+.section-pink {
+    background-color: var(--pink);
+    box-shadow: 0 0 10px var(--blue);
+}
+
+.section-white {
+    background-color: var(--white);
+}
+
+.bgtext {
+    background-color: var(--white);
+    border: 3px solid var(--blue);
+    border-radius: 20px;
+    margin: 0 10vw 0; /*vw is used instead of px to automatically center element in the middle - leaving space on left and right*/
+    padding: 5px;
+}
+
+.linkbutton {
+    display: inline-block;
+    background-color: var(--yellow);
+    text-shadow: none;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 16px;
+}
+
+.linkbutton:hover {
+    background-color: var(--darkyellow);
+}
+
+/**/
+.active-page {
+    background-color: var(--yellow);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 0 0;
+}
+
+.artist-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+}
+
+.artist-gallery img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.artist-gallery span {
+    display: block;
+}
+
+/*tablinks*/
+
+.tab-container {
+    overflow: hidden;
+}
+
+.tab-container button {
+    background-color: var(--white);
+    font-size: 2.25rem;
+    border: 2px solid var(--blue);
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px 0;
+    padding: 14px 16px;
+}
+
+.tab-container button:hover, .tab-container button.active {
+    background-color: var(--black);
+    border: none;
+    padding: 14px 18px;
+    color: var(--white);
+}
+
+.tabcontent, .stagecontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+#location {
+    height: 60vh;
+    max-width: 60vw;
+    object-fit: cover;
+}
+
+#email-text {
+    font-size: 2.5rem;
+}
+
+.socialpages img {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+#contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact-buttons button {
+    margin: 5px;
+}
+
+/*form*/
+
+/*grid-area configuration*/
+#nametext {grid-area: nametext;}
+#name {grid-area: name;}
+#emailtext {grid-area: emailtext;}
+#email {grid-area: email;}
+#contact-numbertext {grid-area: numbertext;}
+#contact-number {grid-area: number;}
+#messagetext {grid-area: messagetext;}
+#message {grid-area: message;}
+#error {grid-area: error;}
+#submit {grid-area: submit;}
+
+/*grid configuration*/
+
+.form-container form {
+    background-color: var(--white);
+    border: 3px solid var(--blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nametext nametext"
+    "name name"
+    "emailtext emailtext"
+    "email email"
+    "numbertext numbertext"
+    "number number"
+    "messagetext messagetext"
+    "message message"
+    "error submit";
+    padding: 10px;
+}
+
+.form-container label {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 10px;
+}
+
+.form-container input, textarea {
+    font-size: 1.1em;
+    background-color: var(--grey);
+    border: 2px solid;
+    padding: 5px;
+}
+
+.form-container textarea {
+    height: 300px;
+}
+
+#submit {
+    background-color: var(--yellow);
+    margin: 20px 0 0;
+    font-size: 1.5em;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 1398px) {
+    .navbar a {
+        margin: 0 2px 0;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1046px) {
+
+    .gallery img {
+        max-width: 350px;
+        max-height: 350px;
+    }
+}
+
+@media only screen and (max-width: 768px) { /*phone - landscape*/
+
+    body {
+        font-size: 1.25em;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav img {
+        width: 300px;
+        margin: 0 0 0 80px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .bgtext {
+        margin: 0;
+    }
+
+    /*hamburger menu*/
+
+    .hamburger-container {
+        display: block;
+        position: fixed;
+        pointer-events: none; /*this has to be on "none" otherwise buttons on specific pages will be unable to be hovered and clicked*/
+    }
+
+    .hamburger {
+        z-index: 1;
+    }
+    
+    .hamburger input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 32px;
+        cursor: pointer;
+        pointer-events: auto; /*this is turned on so hamburger can be clickable - otherwise it won't click*/
+        z-index: 3;
+        opacity: 0;
+    }
+    
+    .hamburger span {
+        display: block;
+        position: relative;
+        top: 12px;
+        width: 33px;
+        height: 4px;
+        background-color: var(--white);
+        border: 1px solid var(--black);
+        border-radius: 10px;
+        margin: 5px 5px;
+        transform-origin: 4px;
+        z-index: 2;
+    }
+    
+    .hamburger input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+    
+    .hamburger input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+    }
+    
+    .hamburger input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg);
+    }
+    
+    .hamburger-links {
+        background-color: var(--white);
+        min-height: 50px;
+        min-width: 350px;
+        font-size: 2em;
+        list-style: none;
+        border: 2px solid var(--black);
+        border-radius: 10px;
+        margin: -100px -45px -55px;
+        padding: 125px 50px 65px;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    
+    .hamburger-links a {
+        color: var(--black);
+        float: left;
+        padding: 0 10px 0;
+        pointer-events: auto; /*turned on so links are clickable*/
+    }
+
+    .hamburger-links a:hover {
+        background-color: var(--yellow);
+        padding: 0 10px 0;
+    }
+    
+    .hamburger input:checked ~ div {
+        transform: none;
+    }
+
+    .active-hamburger, .active-hamburger:hover {
+        background-color: var(--yellow);
+    }
+
+    .gallery {
+        justify-content: space-evenly;
+    }
+
+    .gallery img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .tab-container button {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .stage p {
+        font-size: 1.5em;
+    }
+
+    .artist-gallery img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .socialpages img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    #contact-buttons button {
+        width: 200px;
+    }
+
+    label {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 666px) { /*big phone - portrait*/
+
+    body {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .tab-container button {
+        font-size: 14px;
+    }
+
+    #email-text {
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 382px) { /*phone - portrait*/
+
+    main {
+        margin: 26px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    nav img {
+        max-width: 150px;
+        max-height: 50px;
+    }
+
+    .hamburger-links, .hamburger-links a {
+        font-size: 1.5rem;
+    }
+
+    .gallery img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    #email-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+
+    .hamburger-links a {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo1.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <title>Soundwave Festival | Schedule</title>
+</head>
+<body>
+    <header>
+        <nav class="section-white">
+            <div class="logo">
+                <img src="img/event-logo.png" alt="logo">
+            </div>
+            <div class="hamburger-container">
+                <div class="hamburger">
+                    <!--checkbox-->
+                    <input type="checkbox">
+
+                    <!--3 spans-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <!--menu items-->
+                    <div class="hamburger-links">
+                        <a href="index.html">Home</a><br>
+                        <a href="activities.html">Vendors and Activities</a><br>
+                        <a href="schedule.html" class="active-hamburger">Schedule</a><br>
+                        <a href="artists-page.html">Artists</a><br>
+                        <a href="tickets.html">Tickets</a><br>
+                        <a href="contact-us.html">Information</a><br><br>
+                        <a href="#" class="linkbutton"><strong>Buy tickets</strong></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Vendors and Activities</a>
+                <a href="schedule.html"  class="active-page">Schedule</a>
+                <a href="artists-page.html">Artists</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="contact-us.html">Information</a>
+                <a href="#" class="linkbutton"><strong>Buy tickets</strong></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section-turquoise">
+            <h1>Event Schedules</h1>
+            <p>This is where all the information for event and performance timings are!</p>
+            <p>If you want to find out all the scheduled timings or if you want to find when a specific artist is performing or when an event is happening, interact with the menus and buttons below!</p>
+            <section class="section-pink">
+                <div class="tab-container"><!--days-->
+                    <button class="tablinks" onclick="openTab(event, 'friday')">Friday</button>
+                    <button class="tablinks" onclick="openTab(event, 'saturday')">Saturday</button>
+                    <button class="tablinks" onclick="openTab(event, 'sunday')">Sunday</button>
+                </div>
+            </section>
+            <br>
+            <section class="section-pink">
+                <h2 class="bgtext">Schedule</h2>
+                <h3>Once you pick a day, content will show here!</h3>
+                <div class="tab-container">
+                    <div id="friday" class="tabcontent"><!--stages-->
+                        <h2>Activity Times</h2>
+                        <div class="stage"> <!--it's not a stage view but i'm giving it this class to make the font as big as it is in the stage class-->
+                            <p>10:00 - Raffle entry open</p>
+                            <p>16:00 - Raffle entry closed</p>
+                            <p>17:00 - Raffle winners announced</p>
+                            <p><strong>Art workshop times:</strong></p>
+                            <p>11:30, 13:30, 15:30, 18:00</p>
+                            <p><strong>Capture The Flag times:</strong></p>
+                            <p>12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00</p>
+                        </div>
+                        <br>
+                        <h2 class="bgtext">Stage Timings</h2>
+                        <p>Pick a stage for performance and show details!</p>
+                        <br>
+                        <button class="stagelinks" onclick="openDayTab(event, 'friday-main')">Main Stage</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'friday-bigtop')">Big Top</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'friday-promenade')">Promenade</button>
+                    </div>
+                    <div id="saturday" class="tabcontent"><!--stages-->
+                        <h2>Activity Times</h2>
+                        <div class="stage">
+                            <p>10:00 - Raffle entry open</p>
+                            <p>16:00 - Raffle entry closed</p>
+                            <p>17:00 - Raffle winners announced</p>
+                            <p><strong>Art workshop times:</strong></p>
+                            <p>10:30, 12:30, 14:30, 16:30, 18:30</p>
+                            <p><strong>Capture The Flag times:</strong></p>
+                            <p>12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00</p>
+                        </div>
+                        <br>
+                        <h2 class="bgtext">Stage Timings</h2>
+                        <p>Pick a stage for performance and show details!</p>
+                        <br>
+                        <button class="stagelinks" onclick="openDayTab(event, 'saturday-main')">Main Stage</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'saturday-bigtop')">Big Top</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'saturday-promenade')">Promenade</button>
+                    </div>
+                    <div id="sunday" class="tabcontent"><!--stages-->
+                        <h2>Activity Times</h2>
+                        <div class="stage">
+                            <p>10:00 - Raffle entry open</p>
+                            <p>16:00 - Raffle entry closed</p>
+                            <p>17:00 - Raffle winners announced</p>
+                            <p><strong>Art workshop times:</strong></p>
+                            <p>10:30, 12:30, 14:30, 16:30</p>
+                            <p><strong>Capture The Flag times:</strong></p>
+                            <p>12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00</p>
+                        </div>
+                        <br>
+                        <h2 class="bgtext">Stage Timings</h2>
+                        <p>Pick a stage for performance and show details!</p>
+                        <br>
+                        <button class="stagelinks" onclick="openDayTab(event, 'sunday-main')">Main Stage</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'sunday-bigtop')">Big Top</button>
+                        <button class="stagelinks" onclick="openDayTab(event, 'sunday-promenade')">Promenade</button>
+                    </div>
+                </div>
+
+                <div id="friday-main" class="stagecontent"><!--mainstage-->
+                    <div class="stage">
+                        <p>11:45 - [Music]</p>
+                        <p>13:30 - [Music]</p>
+                        <p>15:30 - [Music]</p>
+                        <p>17:00 - [Music]</p>
+                        <p>19:30 - [Music]</p>
+                        <p>21:00 - [Music]</p>
+                        <p>22:30 - [Music]</p>
+                        <p>23:15 - [Music]</p>
+                    </div>
+                </div>
+                <div id="friday-bigtop" class="stagecontent"><!--bigtop-->
+                    <div class="stage">
+                        <p>12:00 - [Music]</p>
+                        <p>13:00 - [Show]</p>
+                        <p>13:30 - [Show]</p>
+                        <p>14:00 - [Music]</p>
+                        <p>15:00 - [Music]</p>
+                        <p>16:00 - [Music]</p>
+                        <p>16:45 - [Music]</p>
+                        <p>17:30 - [Music]</p>
+                        <p>19:00 - [Music]</p>
+                        <p>21:30 - [Music]</p>
+                        <p>23:00 - [Music]</p>
+                    </div>
+                </div>
+                <div id="friday-promenade" class="stagecontent"><!--promenade-->
+                    <div class="stage">
+                        <p>11:45 - [Music]</p>
+                        <p>13:00 - [Show]</p>
+                        <p>13:30 - [Music]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>16:00 - [Show]</p>
+                        <p>17:30 - [Music]</p>
+                        <p>18:45 - [Music]</p>
+                        <p>20:00 - [Music]</p>
+                        <p>21:30 - [Music]</p>
+                        <p>23:00 - [Music]</p>
+                    </div>
+                </div>
+                <div id="saturday-main" class="stagecontent"><!--mainstage-->
+                    <div class="stage">
+                        <p>00:15 - [Music]</p>
+                        <p>01:15 - [Music]</p>
+                        <p>02:30 - [Music]</p>
+                        <p>12:00 - [Music]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>16:00 - [Music]</p>
+                        <p>17:45 - [Music]</p>
+                        <p>20:00 - [Music]</p>
+                        <p>21:30 - [Music]</p>
+                        <p>23:00 - [Music]</p>
+                    </div>
+                </div>
+                <div id="saturday-bigtop" class="stagecontent"><!--bigtop-->
+                    <div class="stage">
+                        <p>00:30- [Music]</p>
+                        <p>02:00 - [Music]</p>
+                        <p>03:00 - [Music]</p>
+                        <p>12:00 - [Show]</p>
+                        <p>12:30 - [Music]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>14:00 - [Show]</p>
+                        <p>15:00 - [Music]</p>
+                        <p>16:30 - [Music]</p>
+                        <p>17:15 - [Music]</p>
+                        <p>18:45 - [Music]</p>
+                        <p>20:15 - [Music]</p>
+                        <p>21:00 - [Music]</p>
+                        <p>22:30 - [Music]</p>
+                    </div>
+                </div>
+                <div id="saturday-promenade" class="stagecontent"><!--promenade-->
+                    <div class="stage">
+                        <p>00:30 - [Music]</p>
+                        <p>02:00 - [Music]</p>
+                        <p>11:30 - [Music]</p>
+                        <p>12:30 - [Show]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>14:00 - [Show]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>15:45 - [Show] </p>
+                        <p>16:15 - [Music]</p>
+                        <p>17:30 - [Music]</p>
+                        <p>19:00 - [Music]</p>
+                        <p>20:30 - [Music]</p>
+                        <p>22:00 - [Music]</p>
+                        <p>23:30 - [Music]</p>
+                    </div>
+                </div>
+                <div id="sunday-main" class="stagecontent"><!--mainstage-->
+                    <div class="stage">
+                        <p>00:30 - [Music]</p>
+                        <p>02:00 - [Music]</p>
+                        <p>03:15 - [Music]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>16:00 - [Music]</p>
+                        <p>17:30 - [Music]</p>
+                        <p>19:00 - [Music]</p>
+                        <p>20:45 - [Music]</p>
+                        <p>22:00 - [Music]</p>
+                        <p>23:15 - [Music]</p>
+                    </div>
+                </div>
+                <div id="sunday-bigtop" class="stagecontent"><!--bigtop-->
+                    <div class="stage">
+                        <p>00:30 - [Music]</p>
+                        <p>01:30 - [Music]</p>
+                        <p>02:45 - [Music]</p>
+                        <p>11:00 - [Music]</p>
+                        <p>12:30 - [Show]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>13:30 - [Show]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>16:00 - [Music]</p>
+                        <p>17:30 - [Music]</p>
+                        <p>18:45 - [Music]</p>
+                        <p>20:15 - [Music]</p>
+                        <p>21:45 - [Music]</p>
+                        <p>22:45 - [Music]</p>
+                    </div>
+                </div>
+                <div id="sunday-promenade" class="stagecontent"><!--promenade-->
+                    <div class="stage">
+                        <p>01:00 - [Music]</p>
+                        <p>11:30 - [Music]</p>
+                        <p>13:00 - [Music]</p>
+                        <p>13:30 - [Show]</p>
+                        <p>14:00 - [Show]</p>
+                        <p>14:30 - [Music]</p>
+                        <p>15:00 - [Music]</p>
+                        <p>15:30 - [Music]</p>
+                        <p>17:00 - [Music]</p>
+                        <p>18:00 - [Music]</p>
+                        <p>19:00 - [Music]</p>
+                        <p>20:00 - [Music]</p>
+                        <p>21:00 - [Music]</p>
+                        <p>22:00 - [Music]</p>
+                    </div>
+                </div>
+                <!--main stage artists: 30-->
+                <!--big top artists: 33-->
+                <!--promenade artists: 31-->
+            </section>
+        </section>
+    </main>
+    <footer class="section-yellow">
+        
+        <span>&copy; 2025 &mdash; Turquoise Websites</span>
+    </footer>
+</body>
+</html>
